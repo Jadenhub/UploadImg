@@ -8,7 +8,7 @@ function getContent(file, loading){
   if (file) {
     return (
       <React.Fragment>
-        <img className='file-image' src={URL.createObjectURL(file)} />
+        <img alt='uploadimg' className='file-image' src={URL.createObjectURL(file)} />
         <div className='response'>
           <div className="message">{<strong>{file.name}</strong>}</div>
           <progress className="progress" value={loading}></progress>
@@ -87,7 +87,7 @@ class Upload extends React.Component {
     const content = getContent(this.state.file, this.state.loading);
     return (
       <>
-        <h3>React Image Preview & Upload Component</h3>
+        <h3 className='title'>React Image Preview & Upload Component</h3>
         <form className='uploader'>
           <input id='file-upload' onChange={(e)=> this.handleChange(e)} type='file' accept='image/*'/>
             <label 
@@ -101,6 +101,7 @@ class Upload extends React.Component {
             </label>
             <input className='btn-submit' type='submit' value='Submit' onClick={(e) => this.handleSubmit(e)}/>
         </form>
+        <a className="home" href='/'>HOME</a>
       </>
     );
   };

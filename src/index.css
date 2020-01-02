@@ -1,3 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
 .uploader label {
   display: flex;
   flex-direction: column;
@@ -140,4 +152,12 @@
     font-size: 14px;
     border: none;
     margin-top: 20px;
+}
+
+.title {
+  line-height: 60px;
+}
+
+.home {
+  margin: auto;
 }
